@@ -6,6 +6,8 @@ import android.widget.TextView;
 
 public class TheJoker extends AppCompatActivity {
 
+    public static final String THE_JOKE = "theJoke";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -13,7 +15,7 @@ public class TheJoker extends AppCompatActivity {
         setContentView(R.layout.activity_joker_display);
 
         //REQUIRED: receive joke from Intent and set as string variable.
-        String theJoke = getIntent().getStringExtra("theJoke");
+        String theJoke = getIntent().getStringExtra(THE_JOKE);
 
         //declare and set TextView text to display joke.
         TextView jokerTextView = findViewById(R.id.jokerTv);

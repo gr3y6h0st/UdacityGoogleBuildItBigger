@@ -14,6 +14,8 @@ import com.udacity.gradle.builditbigger.backend.myApi.MyApi;
 
 import java.io.IOException;
 
+import static com.nanodegree.android.javajokeslibrary.TheJoker.THE_JOKE;
+
 public class EndpointsAsyncTask extends AsyncTask<Void, Void, String> {
     private static MyApi myApiService = null;
     private Context mContext;
@@ -59,7 +61,7 @@ public class EndpointsAsyncTask extends AsyncTask<Void, Void, String> {
         //creates androidLibrary Activity intent.
         Intent androidLibJokesIntent = new Intent(mContext, TheJoker.class);
         //place joke result as a String Extra.
-        androidLibJokesIntent.putExtra("theJoke", result);
+        androidLibJokesIntent.putExtra(THE_JOKE, result);
 
         //launch Android Library Activity
         mContext.startActivity(androidLibJokesIntent);
